@@ -30840,8 +30840,7 @@ function Documents(_a) {
             /*yield*/
             , editImage({
               doc: doc
-            }) // not sure what this.$scope.$applyAsync() is trying to do
-            ];
+            })];
 
           case 1:
             _a.sent();
@@ -30858,6 +30857,7 @@ function Documents(_a) {
             , 3];
 
           case 3:
+            ;
             return [2
             /*return*/
             ];
@@ -30892,8 +30892,7 @@ function Documents(_a) {
             /*yield*/
             , deleteImage({
               doc: doc
-            }) // not sure what this.$scope.$applyAsync() is trying to do
-            ];
+            })];
 
           case 1:
             _a.sent();
@@ -30910,6 +30909,7 @@ function Documents(_a) {
             , 3];
 
           case 3:
+            ;
             return [2
             /*return*/
             ];
@@ -31028,6 +31028,7 @@ function Documents(_a) {
   }))) : 'no attachments');
 }
 
+;
 exports.default = Documents;
 },{"react":"node_modules/react/index.js","../components":"components/index.ts"}],"index.tsx":[function(require,module,exports) {
 "use strict";
@@ -31118,6 +31119,7 @@ function App() {
   });
 }
 
+;
 react_dom_1.default.render(react_1.default.createElement(App, null), document.getElementById('root'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./views/Documents":"views/Documents.tsx"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -31147,7 +31149,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51442" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53010" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
-import Documents from './views/Documents'
-import { DocumentViewModel } from './models/DocumentModel'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import Documents from './views/Documents';
+import { DocumentViewModel } from './models/DocumentModel';
 
 function App() {
-  const [attachments, setAttachments] = useState([])
+  const [attachments, setAttachments] = useState([]);
 
   const attachImage = (doc: DocumentViewModel) => {
-    setAttachments([...attachments, doc])
-    console.log('attaments', attachments)
-  }
+    setAttachments([...attachments, doc]);
+    console.log('attaments', attachments);
+  };
 
-  const order = () => {}
-  const editImage = () => {}
-  const viewImage = () => {}
-  const deleteImage = () => {}
+  const order = () => {};
+  const editImage = () => {};
+  const viewImage = () => {};
+  const deleteImage = () => {};
 
   return (
     <Documents
@@ -25,8 +25,8 @@ function App() {
       viewImage={viewImage}
       deleteImage={deleteImage}
     />
-  )
-}
+  );
+};
 
 ReactDOM.render(
   <App/>,

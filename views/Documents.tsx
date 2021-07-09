@@ -16,40 +16,40 @@ function Documents ({
 }: DocumentComponentParams) {
   const handleEditImage = async (doc: DocumentViewModel) => {
     try {
-      await editImage({ doc })
+      await editImage({ doc });
       // not sure what this.$scope.$applyAsync() is trying to do
-    } catch(e) { console.log(e) }
-  }
+    } catch(e) { console.log(e) };
+  };
 
   const handleViewImage = async (doc: DocumentViewModel) => {
     return viewImage({ doc }).catch(e => console.error(e));
-  }
+  };
 
   const handleDeleteImage = async (doc: DocumentViewModel) => {
     try {
-      await deleteImage({ doc })
+      await deleteImage({ doc });
       // not sure what this.$scope.$applyAsync() is trying to do
-    } catch(e) { console.log(e) }
-  }
+    } catch(e) { console.log(e) };
+  };
 
   const getImages = (): DocumentViewModel[] => {
     return this.documents.filter(doc => {
       return doc.blob && doc.blob.type === "application/pdf";
     });
-  }
+  };
 
   const getDocuments = (): DocumentViewModel[] => {
     return this.documents.filter(doc => {
       return doc.blob && doc.blob.type !== "application/pdf";
     });
-  }
+  };
 
   const getDocumentHeading = (doc: DocumentViewModel): string => {
     if (!doc.itemLocalId) return "Order Document";
 
     const item = this.order.Items.find(item => item.LocalId === doc.itemLocalId);
     return "Item " + item.ItemNo + (item.location ? ": " + item.location : "");
-  }
+  };
 
   const EmptyState = () => (
     <>
@@ -69,7 +69,7 @@ function Documents ({
         />
       </div>
     </>
-  )
+  );
 
   return (
     <>
@@ -134,7 +134,7 @@ function Documents ({
         </div>
       ) : 'no attachments'}
     </>
-  )
-}
+  );
+};
 
 export default Documents;
